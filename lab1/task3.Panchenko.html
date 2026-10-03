@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+    <style>
+        section1 {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #dddddd;
+        }
+        button {
+            border: 2px solid #000000;
+            background-color: #4c91af;
+            color: #ffffff;
+            padding: 20px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #082e43;
+        }
+    </style>
+</head>
+<body>
+    <h1>Що таке <abbr title="Cascading Style Sheets">CSS</abbr>?</h1>
+    <h2>Зміст</h2>
+    <nav>
+        <ol>
+            <li><a href="#enter">Вступ</a></li>
+            <li><a href="#style">Стилі браузера за замовчуванням</a></li>
+            <li><a href="#for_what">Для чого потрібен CSS?</a></li>
+            <li><a href="#basics">Основи синтаксису CSS</a></li>
+            <li><a href="#examles">Приклади стилів у CSS</a></li>
+            <li><a href="#how_use_w_HTML">Як CSS застосовується до HTML?</a></li>
+            <li><a href="#result">Підсумок</a></li>
+        </ol>
+    </nav>
+        </div>
+         <h1 id = "enter">Вступ</h1>
+         <p>CSS (Cascading Style Sheets) дозволяє створювати гарні веб-сторінки, але як він працює "<strong>під капотом</strong>"?<br> У цій статті пояснюється, що таке CSS, як виглядає його базовий синтаксис і як браузер застосовує CSS до HTML для стилізації.</p>
+         <h3>Попередні вимоги:</h3>
+         <ul type = "circle">
+            <li>Базові знання роботи з файлами</li>
+            <li>Знання <abbr title="HyperText Markup Language">HTML</abbr></li>
+         </ul>
+         <h3>Чого ви навчитеся:</h3>
+        <ul type = "circle">
+            <li>Зрозумієте призначення CSS.</li>
+            <li>Дізнаєтесь, що HTML не відповідає за стилізацію.</li>
+            <li>Розберетеся в концепції стилів браузера за замовчуванням.</li>
+            <li>Ознайомитеся з основами CSS-синтаксису.</li>
+            <li> Дізнаєтесь, як CSS застосовується до HTML.</li>
+        </ul>
+        </div>
+        <hr>
+        <div>
+        <h1 id = "style">Стилі браузера за замовчуванням</h1>
+        <p>У попередньому модулі ми розглянули, що таке HTML і як він використовується для розмітки документів.<br> Ці документи будуть читатися у веб-браузері.<br> Заголовки виглядають більшими, ніж звичайний текст, абзаци переходять на новий рядок і мають пробіл між ними, посилання підкреслені та мають інший колір для відмінності від основного тексту.</p>
+            <img src="https://d8it4huxumps7.cloudfront.net/uploads/images/64dcc7c33b5ae_html_vs_css_01.jpg?d=2000x2000" alt="Приклад HTML та CSS" style="width: auto; height: auto;">
+            <p>Те, що ви бачите, — це стилі браузера за замовчуванням.<br> Вони являють собою базову стилізацію, яку браузер застосовує до HTML, щоб сторінка залишалася читабельною навіть без явного вказання стилів автором.<br> Ці стилі визначені у стандартних CSS-таблицях стилів браузера і не мають відношення до самого HTML.</p>
+        </div>
+        <hr>
+        <div>
+        <h1 id = "for_what">Для чого потрібен CSS?</h1>
+        <p>Використовуючи CSS, ви можете повністю контролювати зовнішній вигляд HTML-елементів у браузері, представляючи документи користувачам у <strong style="color: rgb(9, 29, 67);">будь-якому дизайні та макеті</strong>.</p>
+        <p><mark style="background-color: lightblue;">Документ</mark> — це, як правило, текстовий файл, структурований за допомогою мови розмітки, найчастіше HTML. Проте можна зустріти документи на інших мовах розмітки, таких як <abbr title ="Scalable Vector Graphics">SVG</abbr> та <abbr title="Extensible Markup Language">XML</abbr>.<br>HTML-документ містить контент веб-сторінки та визначає його структуру.</p>
+        <p>Представлення документа користувачеві означає перетворення його у форму, зручну для сприйняття. Браузери <ins style="background-color: rgb(182, 221, 228);">(Firefox, Chrome, Safari, Edge)</ins> призначені для візуального представлення документів на екрані комп’ютера, мобільного пристрою, проектора або принтера. У веб-контексті цей процес називається рендерингом.</p>
+        </div>
+        <div style="background-color: rgb(191, 233, 252); border: 5px solid rgb(26, 74, 81); padding: 5px;">
+            <p><strong>Примітка:</strong> Браузер іноді називають "користувацьким агентом" (user agent), що означає комп'ютерну програму, яка представляє користувача в системі.</p>
+        </div>
+        <table style="border: 2px solid rgb(38, 1, 1); padding: 10px; margin: 10px;">
+            <tr>
+                <th style ="text-align: center; "><ins>CSS дозволяє:</ins></th>
+            </tr>
+            <tr>
+                <td>Стилізувати текст <i>(наприклад, змінювати колір і розмір заголовків і посилань)</i>.</td>
+            </tr>
+            <tr>
+                <td>Визначати макет сторінки <i>(наприклад, розташовувати текст і зображення в стовпцях і рядках)</i>.</td>
+            </tr>
+            <tr>
+                <td>Створювати анімацію <i>(наприклад, змінювати колір кнопки при наведенні курсору)</i>.</td>
+            </tr>
+        </table>
+        <p>CSS організований у модулі, що містять відповідний функціонал. Наприклад, модуль <span style="background-color: rgb(191, 233, 252);">Backgrounds and Borders</span> відповідає за фони та рамки елементів.</p>
+        <hr>
+        <h1 id = "basics">Основи синтаксису CSS</h1>
+        <p><strong>CSS</strong> — це мова на основі правил. Ви визначаєте правила, вказуючи групи стилів, які слід застосовувати до певних елементів HTML на вашій веб-сторінці.</p>
+        <p>Наприклад, якщо ви хочете зробити заголовок <code style="color: red; font-size: 20px;"> &lt;h1&gt; великим і червоним</code>, використовуйте такий код:</p>
+        <pre style ="background-color: rgb(248, 181, 181); ">
+         <code>
+h1 {
+    color: red;
+    font-size: 2.5em;
+   }
+        </code>
+      </pre>
+      <h1 id = "examles">Приклади стилів у CSS</h1>
+      
+      <section1>
+      <table>
+        <caption>Приклади стилів у CSS</caption>
+        <tr>
+            <th>CSS-код</th>
+            <th>Опис</th>
+            <th>Результат</th>
+        </tr>
+        <tr>
+            <td>h1 { color: red; }</td>
+            <td>Робить заголовок червоним</td>
+            <td>Червоний заголовок</td>
+        </tr>
+        <tr>
+            <td>p { font-size: 18px; }</td>
+            <td>Збільшує розмір тексту в &lt;p&gt;.</td>
+            <td>Текст 18px</td>
+        </tr>
+        <tr>
+            <td>div { background: blue; color: white; }</td>
+            <td>Синій фон, білий текст.</td>
+            <td>Білий текст на синьому фоні</td>
+        </tr>
+      </table>
+      </section>
+      <p style="background-color: rgb(191, 233, 252); border: 5px solid rgb(26, 74, 81); padding: 5px;"><strong>Примітка:</strong> Якщо вам потрібно дізнатися більше про якусь властивість, шукайте її в довідниках MDN, w3schools.</p>
+      <hr>
+      <h1 id = "how_use_w_HTML">Як CSS застосовується до HTML?</h1>
+      <p>Коли ви відкриваєте веб-сторінку, браузер спочатку отримує <i>HTML-документ</i> з контентом сторінки та перетворює його у <abbr title="Document Object Model">DOM</abbr>-дерево.</p>
+      <p>Потім він знаходить усі CSS-правила <ins>(як вбудовані в HTML, так і у зовнішніх .css файлах)</ins> і групує їх залежно від елементів, до яких вони застосовуються. <br>Після цього CSS-правила накладаються на DOM-дерево, створюючи рендер-дерево, яке потім відображається у вікні браузера.</p>
+      <h4>Приклад HTML-коду:</h4>
+      <div style="color: rgb(217, 214, 214);padding: 5px; background: rgb(1, 1, 35); border: 2px solid rgb(249, 5, 5);">
+        <pre>
+            <code>
+&lt;h1&gt;CSS — це круто&lt;/h1&gt;
+&lt;p&gt;Ви можете стилізувати текст.&lt;/p&gt;
+&lt;p&gt;А також створювати макети та спецефекти.&lt;/p&gt;
+CSS-код:
+h1 {
+  color: red;
+  font-size: 2.5em;
+}
+p {
+  color: aqua;
+  padding: 5px;
+  background: midnightblue;
+}
+              </code>
+            </pre>
+    
+      </div>
+      <h4>Результат:</h4>
+      <a href="https://stackblitz.com/edit/web-platform-d6bd1y57?embed=1&file=styles.css " target="_blank" rel="noopener noreferrer">Відкрити у Stackblitz</a>
+      <hr>
+      <h1 id="result">Підсумок</h1>
+      <p>Тепер у вас є уявлення про те, що таке CSS і як він працює.<br>Далі ми розглянемо, як писати CSS-код на практиці та детальніше розберемо його синтаксис.</p>
+      <button onclick ="alert('Дякую за перегляд!')">Натисніть на мене</button>
