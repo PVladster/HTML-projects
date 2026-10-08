@@ -1,0 +1,29 @@
+h1, h2{
+    color:orange;
+}
+div#warehouse h2{
+    color:blue;
+}
+p:first-letter{
+    color:red;
+}
+em {
+    background-color:green;
+    color:white;
+}
+#allotment .fruits-list li:nth-child(n) {
+   color: grey;
+}
+.vegetables-list li:nth-child(n) {
+   color: red;
+}
+#warehouse .fruits-list li:nth-child(n) {
+   color: green;
+}
+ tbody td:nth-child(n+2) {
+    background-color: green;
+    color: white;
+}
+tbody td:first-child{
+    color: orange;
+}
