@@ -1,0 +1,16 @@
+a[href^="http"] {
+    color: #4CAF50;
+}
+a[href^="https"]{
+    color:#666;
+}
+a[href^="https://www"]{
+    color:#4CAF50;
+}
+a[target^="_blank"]::after{
+    content: " \21F1";
+    transform: scaleX(-1);
+    margin-inline-start: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
