@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Induvidual table</title>
+    <link rel="stylesheet" href="task.css">
+</head>
+<body>
+   <div class="page-wrapper">
+   <input type="checkbox" id="switcher" hidden>
+   <label for="switcher" class="switcher">
+      <img src="img/light.png" class="light-mode">
+      <img src="img/dark.png" class="dark-mode">
+   </label>
+   <h1>SPA</h1>
+
+  
+   <input type="radio" name="day" id="day-all" checked hidden>
+   <input type="radio" name="day" id="day-week" hidden>
+   <input type="radio" name="day" id="day-weekend" hidden>
+
+   <input type="radio" name="hours" id="t-all" checked hidden>
+   <input type="radio" name="hours" id="t-morning" hidden>
+   <input type="radio" name="hours" id="t-evening" hidden>
+
+   <input type="radio" name="category" id="categ-all" checked hidden>
+   <input type="radio" name="category" id="categ-1" hidden>
+   <input type="radio" name="category" id="categ-2" hidden>
+   <input type="radio" name="category" id="categ-3" hidden>
+   <input type="radio" name="category" id="categ-4" hidden>
+
+   
+   <div class="filters">
+      <fieldset>
+         <legend>Робочі дні</legend>
+         <label for="day-all" class="filter">Всі дні</label>
+         <label for="day-week" class="filter">Будні дні</label>
+         <label for="day-weekend" class="filter">Вихідні дні</label>
+      </fieldset>
+      <fieldset>
+         <legend>Робочі години</legend>
+         <label for="t-all" class="filter">Весь час</label>
+         <label for="t-morning" class="filter">09:00 – 15:00</label>
+         <label for="t-evening" class="filter">15:00 – 21:00</label>
+      </fieldset>
+      <fieldset>
+         <legend>Фахова категорія</legend>
+         <label for="categ-all" class="filter">Всі категорії</label>
+         <label for="categ-1" class="filter">Діагностика</label>
+         <label for="categ-2" class="filter">Клітинне відновлення</label>
+         <label for="categ-3" class="filter">Нервова система</label>
+         <label for="categ-4" class="filter">Естетика</label>
+      </fieldset>
+   </div>
+
+    <table id="table">
+      <thead>
+        <th>Специфіка фахівця</th>
+        <th>ПІБ</th>
+        <th>Досвід фахівця</th>
+        <th>Номер кабінету</th>
+        <th>Робочі дні</th>
+        <th>Робочі години</th>
+      </thead>
+      
+      <tr class="header categ-1">
+        <th class="category-header" colspan="6">Управління станом та діагностика</th>
+      </tr>
+      <tr class="spec categ-1 week morning">
+        <td>Архітектор відновлення</td>
+        <td>Коваленко Олена Миколаївна</td>
+        <td>5 років досвіду в преміальному велнес-консалтингу.</td>
+        <td>1</td>
+        <td>Будні дні</td>
+        <td>09:00 – 15:00</td>
+      </tr>
+      <tr class="spec categ-1 week morning">
+        <td>Лікар-превентолог</td>
+        <td>Савчук Дмитро Олександрович</td>
+        <td>8 років медичної практики, антиейдж-медицина.</td>
+        <td>2</td>
+        <td>Будні дні</td>
+        <td>09:00 – 15:00</td>
+      </tr>
+      <tr class="spec categ-1 weekend evening">
+        <td>Сомнолог-консультант</td>
+        <td>Мельник Вікторія Ігорівна</td>
+        <td>6 років роботи в центрах вивчення розладів сну.</td>
+        <td>3</td>
+        <td>Вихідні дні</td>
+        <td>15:00 – 21:00</td>
+      </tr>
+
+      <tr class="header categ-2">
+        <th class="category-header" colspan="6">Клітинне відновлення та фізіологія</th>
+      </tr>
+      <tr class="spec categ-2 week morning">
+        <td>IV-терапевт</td>
+        <td>Лисенко Ірина Вікторівна</td>
+        <td>10 років стажу в інтенсивній терапії.</td>
+        <td>4</td>
+        <td>Будні дні</td>
+        <td>09:00 – 15:00</td>
+      </tr>
+      <tr class="spec categ-2 weekend morning">
+        <td>Кріотерапевт</td>
+        <td>Ткаченко Максим Юрійович</td>
+        <td>4 роки роботи у спортивній медицині.</td>
+        <td>5</td>
+        <td>Вихідні дні</td>
+        <td>09:00 – 15:00</td>
+      </tr>
+      <tr class="spec categ-2 week evening">
+        <td>Спеціаліст з баротерапії</td>
+        <td>Кравченко Сергій Володимирович</td>
+        <td>9 років досвіду у відділенні гіпербаричної оксигенації.</td>
+        <td>6</td>
+        <td>Будні дні</td>
+        <td>15:00 – 21:00</td>
+      </tr>
+      <tr class="spec categ-2 weekend evening">
+        <td>Спеціаліст з фотобіомодуляції</td>
+        <td>Шевченко Наталія Анатоліївна</td>
+        <td>5 років досвіду в апаратній фізіотерапії.</td>
+        <td>7</td>
+        <td>Вихідні дні</td>
+        <td>15:00 – 21:00</td>
+      </tr>
+
+      <tr class="header categ-3">
+        <th class="category-header" colspan="6">Нервова система та ментальне перезавантаження</th>
+      </tr>
+      <tr class="spec categ-3 week evening">
+        <td>Інструктор з флоатингу</td>
+        <td>Мороз Олег Петрович</td>
+        <td>6 років практики тілесно-орієнтованої терапії.</td>
+        <td>8</td>
+        <td>Будні дні</td>
+        <td>15:00 – 21:00</td>
+      </tr>
+      <tr class="spec categ-3 weekend morning">
+        <td>БОС-терапевт</td>
+        <td>Романенко Анна Станіславівна</td>
+        <td>7 років роботи в нейропсихології.</td>
+        <td>9</td>
+        <td>Вихідні дні</td>
+        <td>09:00 – 15:00</td>
+      </tr>
+      <tr class="spec categ-3 week evening">
+        <td>VR-релаксолог</td>
+        <td>Павленко Ілля Романович</td>
+        <td>4 роки у сфері цифрової психотерапії.</td>
+        <td>21</td>
+        <td>Будні дні</td>
+        <td>15:00 – 21:00</td>
+      </tr>
+
+      <tr class="header categ-4">
+        <th class="category-header" colspan="6">М'язовий каркас та естетика</th>
+      </tr>
+      <tr class="spec categ-4 week morning">
+        <td>Спеціаліст з високотехнологічної фізіотерапії</td>
+        <td>Гаврилюк Тарас Михайлович</td>
+        <td>8 років досвіду апаратної роботи.</td>
+        <td>22</td>
+        <td>Будні дні</td>
+        <td>09:00 – 15:00</td>
+      </tr>
+      <tr class="spec categ-4 weekend evening">
+        <td>Нейром'язовий терапевт</td>
+        <td>Литвин Богдан Тарасович</td>
+        <td>10 років практики в прикладній кінезіології.</td>
+        <td>23</td>
+        <td>Вихідні дні</td>
+        <td>15:00 – 21:00</td>
+      </tr>
+      <tr class="spec categ-4 week evening">
+        <td>Апаратний косметолог</td>
+        <td>Захарова Юлія Олегівна</td>
+        <td>9 років в естетичній медицині.</td>
+        <td>24</td>
+        <td>Будні дні</td>
+        <td>15:00 – 21:00</td>
+      </tr>
+      <tr class="spec categ-4 weekend morning">
+        <td>Трихолог-естетист</td>
+        <td>Поліщук Марина Едуардівна</td>
+        <td>6 років досвіду в діагностиці шкіри голови.</td>
+        <td>25</td>
+        <td>Вихідні дні</td>
+        <td>09:00 – 15:00</td>
+      </tr>
+   </table>
+
+   <hr>
+
+   <form action="task.html">
+      <label for="phone">Введіть свій номер телефону:<span style="color: purple">*</span></label>
+      <input type="text" id="phone" name="phone" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="0973445567" required><br><br>
+      <label for="email">Введіть свою пошту:<span style="color: purple">*</span></label>
+      <input type="email" id="email" name="email" placeholder="bcat456@gmail.com" required>
+      <button type="submit" class="submit">Надіслати дані на телефон</button>
+   </form>
+   </div>
+</body>
+</html>

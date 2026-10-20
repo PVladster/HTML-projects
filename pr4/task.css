@@ -1,0 +1,150 @@
+:root{
+--bg-color:white;
+--text-color:black;
+--hover-even:rgb(241, 219, 251);
+--hover-odd:rgb(225, 176, 247);
+}
+.page-wrapper:has(#switcher:checked){
+    --bg-color:rgb(30, 28, 48);
+    --text-color:white;
+    --hover-even:rgb(199, 100, 245);
+    --hover-odd:rgb(171, 5, 248);
+}
+.switcher{
+    cursor:pointer;
+    display: inline-block;
+}
+.switcher img{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    width: 90px;
+    height: 30px;;
+}
+.switcher .dark-mode{
+    display: none;
+}
+#switcher:checked +.switcher .light-mode{
+    display: none;
+}
+#switcher:checked +.switcher .dark-mode{
+    display: inline-block;
+}
+.page-wrapper{
+    background-color:var(--bg-color);
+    color: var(--text-color);
+    transition: 0.3s; 
+    
+}
+h1{
+    text-align: center;
+}
+thead{
+    font-size: larger;
+}
+.category-header{
+    font-size: larger;
+    padding: 15px;
+}
+#table 
+{
+    border: 2px solid blueviolet;
+    margin: auto;
+    padding:30px;
+    width: 80%;
+}
+tr:nth-child(even):hover td{
+    background-color:var(--hover-even);
+    cursor: pointer;
+}
+tr:nth-child(odd):hover td{
+    background-color: var(--hover-odd);
+    cursor: pointer;
+}
+td:nth-child(4n){
+    text-align: center;
+}
+form{
+    font-size: larger;
+    border: 3px dotted purple;
+    padding: 10px;
+    margin: 10px;
+    width: 30%;
+}
+input:user-invalid {
+border-color: red;
+color: crimson;
+}
+.submit {
+  display: none;
+}
+form:valid .submit{
+    display:inline-block;
+    margin-top: 20px;
+    background-color: plum;
+    font-size: medium;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+.filters fieldset {
+    border: 2px solid blueviolet;
+    border-radius: 8px;
+    padding: 10px;
+}
+.filters legend { font-weight: bold; }
+
+.filter {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 2px;
+    background-color: #e0e0e0;
+    color: #333;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+/* Підсвічування обраних фільтрів */
+#day-all:checked ~ .filters label[for="day-all"],
+#day-week:checked ~ .filters label[for="day-week"],
+#day-weekend:checked ~ .filters label[for="day-weekend"],
+
+#t-all:checked ~ .filters label[for="t-all"],
+#t-morning:checked ~ .filters label[for="t-morning"],
+#t-evening:checked ~ .filters label[for="t-evening"],
+
+#categ-all:checked ~ .filters label[for="categ-all"],
+#categ-1:checked ~ .filters label[for="categ-1"],
+#categ-2:checked ~ .filters label[for="categ-2"],
+#categ-3:checked ~ .filters label[for="categ-3"],
+#categ-4:checked ~ .filters label[for="categ-4"] {
+    background-color: blueviolet;
+    color: white;
+}
+
+/* Логіка фільтрації */
+#day-week:checked ~ #table .spec:not(.week) { display: none; }
+#day-weekend:checked ~ #table .spec:not(.weekend) { display: none; }
+
+#t-morning:checked ~ #table .spec:not(.morning) { display: none; }
+#t-evening:checked ~ #table .spec:not(.evening) { display: none; }
+
+#categ-1:checked ~ #table .spec:not(.categ-1), #categ-1:checked ~ #table .header:not(.categ-1) { display: none; }
+#categ-2:checked ~ #table .spec:not(.categ-2), #categ-2:checked ~ #table .header:not(.categ-2) { display: none; }
+#categ-3:checked ~ #table .spec:not(.categ-3), #categ-3:checked ~ #table .header:not(.categ-3) { display: none; }
+#categ-4:checked ~ #table .spec:not(.categ-4), #categ-4:checked ~ #table .header:not(.categ-4) { display: none; }
+
+/* Ховає заголовки категорій, якщо активний фільтр по часу/днях */
+#day-week:checked ~ #table .header,
+#day-weekend:checked ~ #table .header,
+#t-morning:checked ~ #table .header,
+#t-evening:checked ~ #table .header {
+    display: none;
+}
