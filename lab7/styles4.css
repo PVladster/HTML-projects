@@ -1,0 +1,38 @@
+* { 
+    box-sizing: border-box; 
+}
+body {
+     margin: 0; 
+    }
+body { 
+    font-family: Arial, sans-serif;
+    background: #f5f7f9; 
+    padding: 16px;
+     }
+h1 { 
+    text-align: center; 
+    color: #234e55; 
+}
+.gallery { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+}
+.photo { 
+    flex: 1 1 200px; 
+    height: 220px; 
+    min-width: 0; 
+}
+.photo.wide { 
+    flex-basis: 320px; 
+}
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px; 
+    display: block;
+}
+@media (max-width: 480px) {
+.photo, .photo.wide { flex-basis: 100%;}
+}

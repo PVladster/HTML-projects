@@ -1,0 +1,17 @@
+.fc{
+    display:flex;
+    flex-direction: row;
+}
+
+.first{
+ flex:1; 
+}
+.second{
+flex: 2;
+}
+.third{
+flex: 1;
+}
+.fourth{
+flex: 1;
+}
