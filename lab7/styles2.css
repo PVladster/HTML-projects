@@ -1,26 +1,17 @@
-* { box-sizing: border-box; }
-body { margin: 0; }
-.wrapper {
-display: flex;
-flex-flow: row wrap;
-height: 100vh;
-gap: 20px;
-padding: 10px;
-}
-.wrapper > * {
-padding: 20px;
-background-color: lightgray;
-border-radius: 10px;
-overflow: auto;
-line-height: 1.4;
-}
-header, footer { 
-    flex: 0 0 100%; 
-    width: 12%; 
-}
-aside, main, section {
-    flex: 1 1 0;
-    min-height: 0;
-    width:76%;
+.fc{
+    display:flex;
+    flex-direction: row;
 }
 
+.first{
+ flex:1; 
+}
+.second{
+flex: 2;
+}
+.third{
+flex: 1;
+}
+.fourth{
+flex: 1;
+}
