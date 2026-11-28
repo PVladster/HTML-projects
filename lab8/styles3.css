@@ -1,0 +1,44 @@
+.layot{
+    display: grid;
+    border: 4px dotted black;
+    height: 100%;
+    gap: 2px;
+    grid-template-columns:repeat(12, 1fr);
+    grid-template-rows: 100px auto 100px ;
+    grid-template-areas: 
+    "m h h h h h h h h h h h"
+    "m c c c c c c c c c c c"
+    "m f f f f f f f f f f f";
+
+}
+.header{
+    background-color: bisque;
+    grid-area: h;
+
+}
+.menu{
+    background-color: lightblue;
+    grid-area: m;
+
+}
+.content{
+    background-color: lightgrey;
+    grid-area: c;
+
+}
+.footer{
+    background-color: bisque;
+    grid-area: f;
+}
+html, body{
+    box-sizing: border-box;
+    height: 100%;
+    padding: 10px;
+    margin: 0;
+}
+.layot > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+}
